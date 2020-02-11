@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MCHomem.Blogging.EFCoreSqlServer\MCHomem.Blogging.EFCoreSqlServer.csproj" />
+    <ProjectReference Include="..\MCHomem.Blogging.Models\MCHomem.Blogging.Models.csproj" />
+  </ItemGroup>
+
+</Project>
