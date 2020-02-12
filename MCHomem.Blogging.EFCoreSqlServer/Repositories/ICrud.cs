@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MCHomem.Blogging.EFCoreSqlServer.Repository
+namespace MCHomem.Blogging.EFCoreSqlServer.Repositories
 {
     interface ICrud<E>
     {

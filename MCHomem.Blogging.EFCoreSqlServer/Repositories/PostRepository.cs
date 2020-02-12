@@ -1,8 +1,8 @@
-﻿using MCHomem.Blogging.Models.Entity;
+﻿using MCHomem.Blogging.Models.Entities;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MCHomem.Blogging.EFCoreSqlServer.Repository
+namespace MCHomem.Blogging.EFCoreSqlServer.Repositories
 {
     public class PostRepository : ICrud<Post>
     {

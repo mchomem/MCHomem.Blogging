@@ -1,4 +1,4 @@
-﻿namespace MCHomem.Blogging.Models.Entity
+﻿namespace MCHomem.Blogging.Models.Entities
 {
     public class Post
     {

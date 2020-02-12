@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MCHomem.Blogging.Models.Entity
+namespace MCHomem.Blogging.Models.Entities
 {
     public class Blog
     {

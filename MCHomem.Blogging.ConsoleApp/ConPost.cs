@@ -1,6 +1,6 @@
 ﻿using MCHomem.Blogging.ConsoleApp.Shared;
 using MCHomem.Blogging.Controllers;
-using MCHomem.Blogging.Models.Entity;
+using MCHomem.Blogging.Models.Entities;
 using System;
 using System.Collections.Generic;
 

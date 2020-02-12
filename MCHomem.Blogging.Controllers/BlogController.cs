@@ -1,5 +1,5 @@
-﻿using MCHomem.Blogging.EFCoreSqlServer.Repository;
-using MCHomem.Blogging.Models.Entity;
+﻿using MCHomem.Blogging.EFCoreSqlServer.Repositories;
+using MCHomem.Blogging.Models.Entities;
 using System.Collections.Generic;
 
 namespace MCHomem.Blogging.Controllers
