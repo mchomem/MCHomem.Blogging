@@ -1,4 +1,5 @@
-﻿using MCHomem.Blogging.Models.Entities;
+﻿using MCHomem.Blogging.EFCoreSqlServer.Maps;
+using MCHomem.Blogging.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace MCHomem.Blogging.EFCoreSqlServer
@@ -10,5 +11,11 @@ namespace MCHomem.Blogging.EFCoreSqlServer
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
             => options.UseSqlServer(@"Server=localhost\SQL2017;Database=EFCoreBlogging;User Id=sa;Password=sa@2012;");
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new BlogMap());
+            modelBuilder.ApplyConfiguration(new PostMap());
+        }
     }
 }
