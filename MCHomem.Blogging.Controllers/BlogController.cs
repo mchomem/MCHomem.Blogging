@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace MCHomem.Blogging.Controllers
 {
-    public class BlogController
+    public class BlogController : IController<Blog>
     {
         public void Add(Blog blog)
         {

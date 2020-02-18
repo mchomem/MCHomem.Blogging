@@ -3,14 +3,16 @@ using MCHomem.Blogging.EFCoreSqlServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MCHomem.Blogging.EFCoreSqlServer.Migrations
 {
     [DbContext(typeof(BloggingContext))]
-    partial class BloggingContextModelSnapshot : ModelSnapshot
+    [Migration("20200218002138_AddUser")]
+    partial class AddUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -33,9 +35,6 @@ namespace MCHomem.Blogging.EFCoreSqlServer.Migrations
                         .HasMaxLength(1000);
 
                     b.HasKey("BlogId");
-
-                    b.HasIndex("Url")
-                        .IsUnique();
 
                     b.ToTable("Blog");
                 });
@@ -94,9 +93,6 @@ namespace MCHomem.Blogging.EFCoreSqlServer.Migrations
                         .HasMaxLength(300);
 
                     b.HasKey("UserId");
-
-                    b.HasIndex("Login")
-                        .IsUnique();
 
                     b.ToTable("User");
                 });

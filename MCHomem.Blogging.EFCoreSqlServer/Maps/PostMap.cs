@@ -14,21 +14,21 @@ namespace MCHomem.Blogging.EFCoreSqlServer.Maps
                 .ToTable("Post");
 
             modelBuilder
-                .HasKey(p => p.PostId);
+                .HasKey(x => x.PostId);
 
             modelBuilder
-                .Property(p => p.PostId)
+                .Property(x => x.PostId)
                 .HasColumnName("PostID")
                 .ValueGeneratedOnAdd();
 
             modelBuilder
-                .Property(p => p.Title)
+                .Property(x => x.Title)
                 .HasColumnName("Title")
                 .HasMaxLength(200)
                 .IsRequired();
 
             modelBuilder
-                .Property(p => p.Content)
+                .Property(x => x.Content)
                 .HasColumnName("Content")
                 .HasMaxLength(3000)
                 .IsRequired();

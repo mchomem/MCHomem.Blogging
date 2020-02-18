@@ -14,18 +14,22 @@ namespace MCHomem.Blogging.EFCoreSqlServer.Maps
                 .ToTable("Blog");
 
             modelBuilder
-                .HasKey(b => b.BlogId);
+                .HasKey(x => x.BlogId);
 
             modelBuilder
-                .Property(b => b.BlogId)
+                .Property(x => x.BlogId)
                 .HasColumnName("BlogID")
                 .ValueGeneratedOnAdd();
 
             modelBuilder
-                .Property(b => b.Url)
+                .Property(x => x.Url)
                 .HasColumnName("Url")
                 .HasMaxLength(1000)
                 .IsRequired();
+
+            modelBuilder
+                .HasIndex(x => x.Url)
+                .IsUnique();
         }
 
         #endregion

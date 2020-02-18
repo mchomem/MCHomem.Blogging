@@ -8,6 +8,8 @@ namespace MCHomem.Blogging.EFCoreSqlServer
     {
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Post> Posts { get; set; }
+        public DbSet<User> Users { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
             => options.UseSqlServer(@"Server=localhost\SQL2017;Database=EFCoreBlogging;User Id=sa;Password=sa@2012;");
@@ -16,6 +18,7 @@ namespace MCHomem.Blogging.EFCoreSqlServer
         {
             modelBuilder.ApplyConfiguration(new BlogMap());
             modelBuilder.ApplyConfiguration(new PostMap());
+            modelBuilder.ApplyConfiguration(new UserMap());
         }
     }
 }

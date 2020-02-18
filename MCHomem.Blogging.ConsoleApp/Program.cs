@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MCHomem.Blogging.ConsoleApp.Shared;
+using MCHomem.Blogging.Controllers;
+using System;
 
 namespace MCHomem.Blogging.ConsoleApp
 {
@@ -9,6 +11,7 @@ namespace MCHomem.Blogging.ConsoleApp
         static void Main(String[] args)
         {
             Init();
+            ConLogin.Authenticate();
             AddMenu();
         }
 
@@ -19,6 +22,7 @@ namespace MCHomem.Blogging.ConsoleApp
         private static void Init()
         {
             Console.Title = "Console app to works with Entity Framework Core & Sql Server";
+            new UserController().InitializeUser();
         }
 
         private static void AddMenu()
@@ -26,6 +30,7 @@ namespace MCHomem.Blogging.ConsoleApp
             while (true)
             {
                 Console.Clear();
+                Header.Add();
                 Console.WriteLine("\n*** Menu ***");
                 Console.WriteLine("\n1. Blog");
                 Console.WriteLine("2. Post");
@@ -59,6 +64,7 @@ namespace MCHomem.Blogging.ConsoleApp
             while (true)
             {
                 Console.Clear();
+                Header.Add();
                 Console.WriteLine("\n*** Blog - operations ***");
                 Console.WriteLine("\n1. Add");
                 Console.WriteLine("2. Remove");
@@ -106,6 +112,7 @@ namespace MCHomem.Blogging.ConsoleApp
             while (true)
             {
                 Console.Clear();
+                Header.Add();
                 Console.WriteLine("\n*** Post - operations ***");
                 Console.WriteLine("\n1. Add");
                 Console.WriteLine("2. Remove");

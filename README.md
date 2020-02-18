@@ -14,6 +14,12 @@ You will need an installation of Visual Studio 2019 (community) and must have a 
 To build the code, just load the project in Visual Studio.<br>
 Because it is a small project, there was no need to include tests (but I confess that I was tempted)
 
+# Use
+
+This app contains a login form, to use this app, type user and password:
+Login: admin
+Password: admin
+
 # Contribute
 
 If you are interested in contributing to some improvement in the architecture, just send a code request.
