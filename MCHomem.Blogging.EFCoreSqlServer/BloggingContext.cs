@@ -1,4 +1,4 @@
-﻿using MCHomem.Blogging.EFCoreSqlServer.Maps;
+﻿using MCHomem.Blogging.EFCoreSqlServer.Mappings;
 using MCHomem.Blogging.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,9 +16,9 @@ namespace MCHomem.Blogging.EFCoreSqlServer
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new BlogMap());
-            modelBuilder.ApplyConfiguration(new PostMap());
-            modelBuilder.ApplyConfiguration(new UserMap());
+            modelBuilder.ApplyConfiguration(new BlogMapping());
+            modelBuilder.ApplyConfiguration(new PostMapping());
+            modelBuilder.ApplyConfiguration(new UserMapping());
         }
     }
 }

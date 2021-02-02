@@ -2,9 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace MCHomem.Blogging.EFCoreSqlServer.Maps
+namespace MCHomem.Blogging.EFCoreSqlServer.Mappings
 {
-    public class UserMap : IEntityTypeConfiguration<User>
+    public class UserMapping : IEntityTypeConfiguration<User>
     {
         #region Method using Fluent API
 
