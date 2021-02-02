@@ -6,6 +6,7 @@ namespace MCHomem.Blogging.EFCoreSqlServer.Repositories
 {
     public class PostRepository : ICrud<Post>
     {
+        #region Methods
         public void Create(Post entity)
         {
             using (BloggingContext db = new BloggingContext())
@@ -69,5 +70,7 @@ namespace MCHomem.Blogging.EFCoreSqlServer.Repositories
                 return posts;
             }
         }
+
+        #endregion
     }
 }
